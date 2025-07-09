@@ -2,6 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
+import SmartToyIcon from "@mui/icons-material/SmartToy";
 
 interface MessageCardProps {
   isAI: boolean;
@@ -24,7 +25,7 @@ const MessageCard: React.FC<MessageCardProps> = (props) => {
           marginX: 1,
         }}
       >
-        AI
+        {props.isAI ? "AI" : <SmartToyIcon />}
       </Avatar>
       <Box
         sx={{
