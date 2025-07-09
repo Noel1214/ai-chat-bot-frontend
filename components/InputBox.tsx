@@ -6,32 +6,27 @@ import Button from "@mui/material/Button";
 
 const InputBox = () => {
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box sx={{}}>
       <Box
         sx={{
-          position: "absolute",
           width: "100vw",
-          bottom: 0,
-          left: 0,
           paddingX: "1rem",
           background: "#1E293B",
-          height: "6rem",
+          height: { xs: "11rem", sm: "6rem" },
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
+          alignItems: { sm: "center" },
+          paddingY: { xs: 3, sm: 1 },
         }}
       >
         <Box
           component="form"
-          autoComplete="on"
           sx={{
             width: "96%",
-            height: "50%",
-            // padding: "0.9rem",
+            height: { xs: "40%", sm: "70%" },
             background: "#334155",
             display: "flex",
             alignItems: "center",
-            // justifyContent: "center",
             borderRadius: 4,
           }}
         >
@@ -39,15 +34,10 @@ const InputBox = () => {
             id="outlined-basic"
             variant="outlined"
             placeholder="ask anything!"
-            multiline
-            color="error"
             sx={{
               input: {
                 cursor: "pointer",
-                color: "primary",
-                background: "green",
               },
-              color: "blue",
               width: "100%",
               height: "100%",
               border: "none",
