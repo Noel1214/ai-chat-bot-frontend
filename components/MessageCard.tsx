@@ -13,13 +13,13 @@ const MessageCard: React.FC<MessageCardProps> = (props) => {
       sx={{
         display: "flex",
         gap: 1,
-        flexDirection: props.isAI ? "row" : "row-reverse",
+        flexDirection: props.isAI ? "row-reverse" : "row",
       }}
     >
       <Avatar
         sx={{
-          background: "yellow",
-          color: "black",
+          bgcolor: props.isAI ? "#2563EB" : "#334155",
+          color: "white",
           display: "inline-flex",
           marginX: 1,
         }}
@@ -28,8 +28,9 @@ const MessageCard: React.FC<MessageCardProps> = (props) => {
       </Avatar>
       <Box
         sx={{
-          maxWidth: { sx: "80vw", sm: "auto" },
+          maxWidth: { sx: "80vw", sm: "40vw" },
           background: "gray",
+          bgcolor: props.isAI ? "#2563EB" : "#334155",
           padding: 1,
           borderRadius: 2,
         }}
@@ -38,7 +39,6 @@ const MessageCard: React.FC<MessageCardProps> = (props) => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
           accusantium illum quam iure excepturi! Reiciendis, fuga? Quia
           aspernatur inventore natus laborum necessitatibus sapiente
-          consectetur, doloremque ducimus, cum eveniet odio incidunt.
         </Typography>
       </Box>
     </Box>
