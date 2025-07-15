@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import messageReducer from "./features/messages/messagesSlice";
+import conversationReducer from "./features/conversations/conversationSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      messages: messageReducer,
+      conversation: conversationReducer,
     },
   });
 };
