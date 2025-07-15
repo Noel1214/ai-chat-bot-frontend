@@ -22,7 +22,7 @@ const InputBox = () => {
   } = useForm<Inputs>();
 
   const dispatch = useDispatch();
-  const response = useSelector((state: RootState) => state.messages.response);
+  const response = useSelector((state: RootState) => state.conversation.response);
   const [outPut, setoutPut] = useState("");
 
   const getData = () => {
